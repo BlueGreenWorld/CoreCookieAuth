@@ -23,9 +23,9 @@ namespace CoreSecurity.Controllers
             if (LoginUser(loginModel.Username, loginModel.Password))
             {
                 var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, loginModel.Username)
-            };
+                {
+                    new Claim(ClaimTypes.Name, loginModel.Username)
+                };
 
                 var userIdentity = new ClaimsIdentity(claims, "login");
 
